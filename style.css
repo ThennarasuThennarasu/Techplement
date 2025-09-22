@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+ 
+
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.website-container{
+    width: 100%;
+    max-width: 1400vh;
+    min-height: 100vh;
+    margin: 0px auto;
+}
+
+section.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(91, 216, 216);
+}
+
+.home .main-navbar{
+    position: absolute;
+    width: 100%;
+    max-width: 1400vh;
+    height: 12vh;
+    max-height: 80px;
+    background-color:rgb(10, 92, 10) ;
+    padding: 0px 8%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.main-navbar .logo{
+    text-decoration: none;
+}
+
+.main-navbar .logo img{
+    width: 120px;
+    height: auto;
+}
+
+.main-navbar .nav-list{
+    list-style: none;
+
+}
+
+.main-navbar .nav-list li{
+    display: inline-block;
+    margin: 0px 10px;
+    
+}
+
+.main-navbar .nav-list li a{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    font-style: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.main-navbar .nav-list li a::after{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    top: calc(100% + 2px);
+    transform: all 0.3s;
+}
+
+.main-navbar .nav-list li a:hover::after{
+    transform: scaleX(1);
+}
