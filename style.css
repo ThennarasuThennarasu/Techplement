@@ -24,6 +24,7 @@
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 header{
@@ -42,7 +43,7 @@ header{
 
 .logo img{
     height: auto;
-    width: 90px;
+    width: 200px;
     max-width: 100%;
 }
 
@@ -60,6 +61,7 @@ header{
 
 .navbar a:hover{
     color:var(--main-color);
+    text-decoration: underline;
 }
 
 .header-icons{
@@ -87,10 +89,14 @@ header{
      display: none;
 }
 
+#menu-icons.fa-xmark{
+    font-size: 34px;
+    
+}
+
 section{
-    padding: 80px 13px;
+    padding: 70px 13%;
     justify-content: space-between;
-    padding: 23px 13%;
     
 }
 
@@ -160,9 +166,10 @@ section{
 }       
 
 .home-img img{
-    height: auto;
-    width: 60%;
-    margin-left: 300px;
+    height: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: block;
 }
 
 header.sticky{
@@ -191,7 +198,7 @@ header.sticky{
     display: flex;
     align-items: center;
     gap: 1rem;
-    border: 2px solid #e9ecef;
+    border: 2px solid #cfd1d4;
     border-radius: 20px;
     padding: 10px 10px;
     box-shadow: -11.729px 32px rgb(225 225 225 / 15%);
@@ -253,7 +260,7 @@ header.sticky{
 
 .box{
     padding: 25px 60px;
-    border: 2px solid #e9ecef;
+    border: 2px solid #d3d5d7;
     border-radius: 20px;
     box-shadow: -11.729px 32px rgb(225 225 225 / 15%);
     transition: all .40s ease;
@@ -379,7 +386,7 @@ header.sticky{
 
 }
 
-.star i{
+.start i{
     color: var(--main-color);
     margin-right: 2px;
     font-size: 17px;
@@ -461,7 +468,7 @@ header.sticky{
 
 .contact-contact img{
     height: auto;
-    width: 160px;
+    width: 200px;
     max-width: 100%;
     margin-bottom: 30px;
 
@@ -495,6 +502,8 @@ header.sticky{
     letter-spacing: 1px;
 }
 
+
+
 @media (max-width: 1410px){
     header{
         padding: 10px 3%;
@@ -511,6 +520,7 @@ header.sticky{
      .Container{
         padding: 70px 3%;
         transition: .2s;
+        align-content: center;
      }
      .contact{
         padding: 60px 3%;
@@ -531,14 +541,14 @@ header.sticky{
 }
 
 @media (max-width: 1025px){
-            #menu-icon{
+            #menu-icons{
                 display: block;
 
             }
             .navbar{
                 position: absolute;
                 top: 100%;
-                right: 0;
+                right: -100%;
                 width: 300px;
                 height: 110vh;
                 background: var(--main-color);
@@ -548,4 +558,49 @@ header.sticky{
                 padding: 170px 30px;
                 transition: all .40s ease;
             }
+
+            .navbar a{
+                display: block;
+                margin: 1.3rem 0;
+                color: var(--bg-color);
+            }
+
+            .navbar a:hover{
+                color: var(--bg-color);
+                transform: translateY(-15px);
+            }
+            .navbar.open{
+                right: 0;
+            }
+}
+
+@media (max-width: 890px){
+    .home{
+        height: 150vh;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .home-text{
+        padding-top: 20px;
+    }
+
+    .home-img{
+        text-align: center;
+    }
+    .home-img img{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px){
+    .home{
+        height: 120vh;
+    }
+}
+
+@media (max-width: 480px){
+    .Categories-content{
+        grid-template-columns: 1fr;
+    }
 }
