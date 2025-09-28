@@ -518,9 +518,9 @@ header.sticky{
         transition: .2s;
      }
      .Container{
-        padding: 70px 3%;
+        padding: 70px 15%;
         transition: .2s;
-        align-content: center;
+        
      }
      .contact{
         padding: 60px 3%;
